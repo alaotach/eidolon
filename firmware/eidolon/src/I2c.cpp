@@ -2,20 +2,20 @@
 
 TwoWire* I2c::wire = nullptr;
 
-void I2C::init() {
+void I2c::init() {
     wire = new TwoWire(0);
     wire->begin(OLED_SDA, OLED_SCL, 400000);
 };
 
-TwoWire& I2C::getWire() {
+TwoWire& I2c::getWire() {
     if (!wire) {
         init();
     }
     return *wire;
 }
 
-bool I2C::isDevicePresent(uint8_t address) {
+bool I2c::isDevicePresent(uint8_t address) {
     wire->beginTransmission(address);
-    byte err = wire->endTransmission();
+    uint8_t err = wire->endTransmission();
     return err == 0;
 }
