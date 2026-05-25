@@ -1,18 +1,40 @@
 #include <Arduino.h>
+#include "Config.h"
+#include "I2c.h"
+#include "I2S.h"
+#include "LittleFSM.h"
+#include "OLED.h"
+#include "IMU.h"
+#include "MEDIA.h"
+#include "ImageRender.h"
+#include "WiFiM.h"
+#include "WebM.h"
 
-// put function declarations here:
-int myFunction(int, int);
+void bootAnim();
+void updateIMU();
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  Serial.begin(1120000);
+  delay(100);
+  I2c::init();
+  LittleFSM::init();
+  I2S::init();
+  MediaManager::init();
+  if (WiFiM::init()) {
+    WebM::init();
+    WiFiM::getIP().toString();
+  }
+  bootAnim();
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  WebM::handle();
+  updateIMU();
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+void updateIMU() {
+  uint32_t now = millis();
+  if (IMU::getGyroX) {
+    IMU::update();
+  }
 }
