@@ -29,7 +29,7 @@ Euphoria is a 3d holographic display for your setup and you can display whatever
 
 
 **Misc Files:**
-- `hardware/fab/outputs/bom/hologram-BOM.xlsx` - BOM and component placement exports.
+- `hardware/fab/outputs/bom/BOM.csv` - BOM.
 
 ## The Files You Actually Need
 **To Manufacture the PCB:**
@@ -51,7 +51,7 @@ Upload your gerber zip to jlcpcb and place your order.
 
 ---
 
-### Step 4 - Solder the leftover parts
+### Step 3 - Solder the leftover parts
 
 - Battery connector
 - Speaker connector
@@ -60,22 +60,26 @@ Upload your gerber zip to jlcpcb and place your order.
 
 ---
 
-### Step 5 - Connect the Battery
+### Step 4 - Connect the Battery
 Use a flat LiPo battery with a 2-pin JST PH2.0 connector.
 
 ---
 
-### Step 6 - Connect the Display
+### Step 5 - Connect the Display
 Connect the 1.3 inch 4 pin Oled display module.
 ---
 
-### Step 7 - Flash the Firmware
+### Step 6 - Flash the Firmware
 - Use PlatformIO to flash the firmware in the ESP32-C3-WROOM-02
 
 ---
 
-### Step 8 - 3D Print
+### Step 7 - 3D Print
 - **Material:** PLA works.
+---
+
+### Step 9 - Assemble the Pyramid
+Cut your transparent acrylic sheet into 4 identical trapezoid pieces and place them accordingly.
 ---
 
 ### Modifying the Firmware
