@@ -3,6 +3,9 @@
 ## Project Overview
 Euphoria is a 3d holographic display for your setup and you can display whatever you want on it from anywhere in the world using the WiFi.
 
+## Why I Built This
+I was looking to build something, i searched for many ideas and I had liked a women safety device at first but that didn't make some sense so i started looking again and then i found something on my youtube recommendation it was titled "real holographic displays" and it showed a similar holographic display using the pepper's ghost technique and I really liked the idea and I wanted it on my desk too so i started building it immediately.
+
 <img width="1748" height="2480" alt="EUPHORIA-zine" src="https://github.com/user-attachments/assets/f05f8a8d-315b-4047-aa72-dea24bb75f8c" />
 
 ## What's Inside This Folder
